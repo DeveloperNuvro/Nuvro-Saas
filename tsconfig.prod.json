@@ -113,30 +113,30 @@
 // }
 
 
+
 {
   "compilerOptions": {
     "target": "ES2020",
     "module": "CommonJS",
     "outDir": "./dist",
-    "rootDir": ".",
+    "rootDir": "src",
     "baseUrl": ".",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "skipLibCheck": true,
     "resolveJsonModule": true,
-    "typeRoots": [
-      "./node_module/@types",
-       "./src/types"
-     ],  
+    "types": ["node"], 
+    "noEmitOnError": true,
      "paths": {
-      "@src/*": ["src/*"]               // Configure path aliases
+      "@src/*": ["src/*"]               
     }
   },
-  "include": ["src/**/*.ts", "jest.config.ts"], 
-  "exclude": ["node_modules"] 
+  "include": ["src/**/*.ts"], 
+  "exclude": ["src/**/*.test.ts", "jest.config.ts", "node_modules"]
 }
-
-
-
-
+  
+  
+  
+  
+  

@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "test:watch": "jest --watch",
     "dev": "nodemon --exec ts-node src/index.ts",
-    "build": "tsc",
-    "start": "ts-node src/index.ts"
+    "build": "tsc -p tsconfig.prod.json",
+    "start": "node ./dist/src/index.js"
   },
   "keywords": [],
   "author": "",
