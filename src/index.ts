@@ -11,6 +11,15 @@ dotenv.config();
 export const app = express();
 app.use(express.json());
 
+// ✅ Allow all origins (ANYWHERE)
+app.use(
+  cors({
+    origin: "*", // Allows requests from anywhere
+    methods: "GET,POST,PUT,DELETE",
+    allowedHeaders: "Content-Type,Authorization",
+  })
+);
+
 // Connect to MongoDB and Redis
 if (process.env.NODE_ENV !== "test") {
   connectDB();
